@@ -71,7 +71,7 @@ actions:
   initGlobals:
     - script: |
         var regions = '${settings.regions}'.split(','), index, resp,
-            onAfterReturn = { setGlobals: {} }, 
+            onAfterReturn = { setGlobals: {} },
             glbs = onAfterReturn.setGlobals;
         resp = jelastic.env.control.GetRegions(appid, session);
         if (resp.result != 0) return resp;
